@@ -1,0 +1,133 @@
+{
+  "HomePage": {
+    "title": "Olá mundo!"
+  },
+  "ComoFunciona": {
+    "title": "Como o LexiFlow funciona",
+    "receiveWordsTitle": "Receba palavras diariamente",
+    "receiveWordsDescription": "Você recebe palavras e frases para aprender diretamente no WhatsApp, Telegram ou Discord.",
+    "answerWhenYouCanTitle": "Responda quando puder",
+    "answerWhenYouCanDescription": "Sem pressão! Responda às perguntas quando for conveniente para você, direto no chat.",
+    "aiAdaptsContentTitle": "Nossa IA adapta o conteúdo",
+    "aiAdaptsContentDescription": "A inteligência artificial personaliza o aprendizado conforme seu progresso e dificuldades."
+  },
+  "CtaFinal": {
+    "title": "Pronto para revolucionar seu aprendizado de idiomas?",
+    "description": "Junte-se a mais de 10.000 pessoas que já estão aprendendo idiomas sem mudar suas rotinas.",
+    "button": "COMEÇAR AGORA",
+    "premiumOffer": "Os primeiros 500 usuários ganham 3 meses de plano Premium grátis!"
+  },
+  "FaqSection": {
+    "title": "Perguntas Frequentes",
+    "faqItems": [
+      {
+        "question": "Como o LexiFlow funciona?",
+        "answer": "O LexiFlow envia palavras e frases para você aprender diretamente no WhatsApp, Telegram ou Discord. Você responde quando puder, e nossa IA adapta o conteúdo ao seu ritmo de aprendizado."
+      },
+      {
+        "question": "Quais idiomas estão disponíveis?",
+        "answer": "Atualmente oferecemos inglês, espanhol, francês, alemão, italiano e japonês. Estamos constantemente adicionando novos idiomas."
+      },
+      {
+        "question": "Quanto tempo preciso dedicar por dia?",
+        "answer": "Apenas 5 minutos por dia são suficientes para ver resultados. Como as mensagens chegam onde você já está, é fácil encaixar o aprendizado na sua rotina."
+      },
+      {
+        "question": "Posso cancelar minha assinatura a qualquer momento?",
+        "answer": "Sim, você pode cancelar sua assinatura a qualquer momento através do seu painel de controle, sem taxas adicionais."
+      },
+      {
+        "question": "O LexiFlow funciona para crianças?",
+        "answer": "Sim! O LexiFlow é adequado para estudantes de todas as idades. Para crianças menores de 13 anos, recomendamos que os pais supervisionem o uso."
+      },
+      {
+        "question": "Como o sistema de repetição espaçada funciona?",
+        "answer": "O sistema de repetição espaçada apresenta as palavras em intervalos crescentes, baseados no seu desempenho. Palavras que você acerta são mostradas com menos frequência, enquanto palavras difíceis aparecem mais vezes até que você as domine."
+      }
+    ]
+  },
+  "PlanosPrecos": {
+    "title": "Planos que cabem no seu bolso",
+    "subtitle": "Escolha o plano ideal para o seu aprendizado",
+    "pricingPlans": [
+      {
+        "title": "Gratuito",
+        "subtitle": "Para experimentar",
+        "price": "R$ 0",
+        "features": [
+          "Limite de 20 palavras/dia",
+          "Acesso a temas básicos",
+          "Uma plataforma de mensagens"
+        ],
+        "buttonText": "Começar Grátis"
+      },
+      {
+        "title": "Premium",
+        "subtitle": "Para aprendizado sério",
+        "price": "R$ 29,90/mês",
+        "features": [
+          "Palavras/frases ilimitadas",
+          "Todos os temas disponíveis",
+          "Todas as plataformas de mensagens",
+          "Análises avançadas",
+          "AI-personalized content"
+        ],
+        "buttonText": "Assinar Agora"
+      },
+      {
+        "title": "Empresarial",
+        "subtitle": "Para escolas e empresas",
+        "price": "Personalizado",
+        "features": [
+          "Soluções customizadas",
+          "Dashboard para professores",
+          "Conteúdo específico para indústrias",
+          "Suporte dedicado"
+        ],
+        "buttonText": "Fale Conosco"
+      }
+    ]
+  },
+  "PropostaDeValor": {
+    "title": "Por que o LexiFlow funciona",
+    "integratedLearningTitle": "Aprendizado Integrado",
+    "integratedLearningDescription": "Elimina a necessidade de abrir um aplicativo separado para estudar; as revisões chegam diretamente onde você já está.",
+    "spacedRepetitionTitle": "Repetição Espaçada",
+    "spacedRepetitionDescription": "Utiliza algoritmos comprovados de aprendizado para maximizar a retenção de conhecimento.",
+    "aiPersonalizadaTitle": "IA Personalizada",
+    "aiPersonalizadaDescription": "Ajusta automaticamente a dificuldade e o conteúdo conforme o progresso do usuário.",
+    "gamificationTitle": "Gamification",
+    "gamificationDescription": "Transforma o estudo em uma experiência divertida e viciante com pontos, níveis e conquistas."
+  },
+  "ProvaSocial": {
+    "title": "O que nossos usuários dizem",
+    "description": "Já ajudamos mais de 10.000 pessoas a dominarem novos idiomas",
+    "testimonials": [
+      {
+        "name": "Rafael Moreira",
+        "role": "Estudante de inglês",
+        "testimonial": "Finalmente estou progredindo no inglês! Já tinha tentado vários apps, mas sempre esquecia de usar. Com o LexiFlow, as palavras chegam direto no meu WhatsApp e eu respondo quando posso."
+      },
+      {
+        "name": "Carla Santos",
+        "role": "Profissional de TI",
+        "testimonial": "A gamificação me mantém motivada! Adoro ver meus pontos aumentando e subir de nível. Já aprendi mais de 500 palavras em espanhol em apenas 3 meses usando o LexiFlow."
+      },
+      {
+        "name": "Pedro Lima",
+        "role": "Professor",
+        "testimonial": "Como professor, recomendo o LexiFlow para todos os meus alunos. A repetição espaçada realmente funciona, e o fato de usar o WhatsApp elimina qualquer desculpa para não praticar."
+      }
+    ],
+    "reviews": "(758 avaliações)"
+  },
+  "WhatsAppSimulation": {
+    "dailyPractice": "Olá! Hora da sua prática diária 🚀",
+    "howToSayMeeting": "Como se diz \"reunião\" em inglês?",
+    "correctPoints": "✅ Correto! +10 pontos",
+    "streak": "Você está em uma sequência de 3 dias!"
+  },
+  "PricingCard": {
+    "popular": "POPULAR"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "HomePage": {
+    "title": "Hello world!"
+  },
+  "ComoFunciona": {
+    "title": "How LexiFlow works",
+    "receiveWordsTitle": "Receive words daily",
+    "receiveWordsDescription": "You receive words and phrases to learn directly on WhatsApp, Telegram or Discord.",
+    "answerWhenYouCanTitle": "Answer when you can",
+    "answerWhenYouCanDescription": "No pressure! Answer the questions when it's convenient for you, right in the chat.",
+    "aiAdaptsContentTitle": "Our AI adapts the content",
+    "aiAdaptsContentDescription": "Artificial intelligence personalizes learning according to your progress and difficulties."
+  },
+  "CtaFinal": {
+    "title": "Ready to revolutionize your language learning?",
+    "description": "Join over 10,000 people who are already learning languages without changing their routines.",
+    "button": "START NOW",
+    "premiumOffer": "The first 500 users get 3 months of Premium plan for free!"
+  },
+  "FaqSection": {
+    "title": "Frequently Asked Questions",
+    "faqItems": [
+      {
+        "question": "How does LexiFlow work?",
+        "answer": "LexiFlow sends words and phrases for you to learn directly on WhatsApp, Telegram, or Discord. You respond when you can, and our AI adapts the content to your learning pace."
+      },
+      {
+        "question": "What languages are available?",
+        "answer": "We currently offer English, Spanish, French, German, Italian, and Japanese. We are constantly adding new languages."
+      },
+      {
+        "question": "How much time do I need to dedicate per day?",
+        "answer": "Just 5 minutes a day is enough to see results. Since the messages arrive where you already are, it's easy to fit learning into your routine."
+      },
+      {
+        "question": "Can I cancel my subscription at any time?",
+        "answer": "Yes, you can cancel your subscription at any time through your control panel, without additional fees."
+      },
+      {
+        "question": "Does LexiFlow work for children?",
+        "answer": "Yes! LexiFlow is suitable for students of all ages. For children under 13, we recommend that parents supervise the use."
+      },
+      {
+        "question": "How does the spaced repetition system work?",
+        "answer": "The spaced repetition system presents words at increasing intervals, based on your performance. Words that you get right are shown less frequently, while difficult words appear more often until you master them."
+      }
+    ]
+  },
+  "PlanosPrecos": {
+    "title": "Plans that fit in your pocket",
+    "subtitle": "Choose the ideal plan for your learning",
+    "pricingPlans": [
+      {
+        "title": "Free",
+        "subtitle": "To try out",
+        "price": "$ 0",
+        "features": [
+          "Limit of 20 words/day",
+          "Access to basic themes",
+          "One messaging platform"
+        ],
+        "buttonText": "Start Free"
+      },
+      {
+        "title": "Premium",
+        "subtitle": "For serious learning",
+        "price": "$ 29.90/month",
+        "features": [
+          "Unlimited words/phrases",
+          "All themes available",
+          "All messaging platforms",
+          "Advanced analytics",
+          "AI-personalized content"
+        ],
+        "buttonText": "Subscribe Now"
+      },
+      {
+        "title": "Business",
+        "subtitle": "For schools and companies",
+        "price": "Custom",
+        "features": [
+          "Customized solutions",
+          "Dashboard for teachers",
+          "Specific content for industries",
+          "Dedicated support"
+        ],
+        "buttonText": "Contact Us"
+      }
+    ]
+  },
+  "PropostaDeValor": {
+    "title": "Why LexiFlow works",
+    "integratedLearningTitle": "Integrated Learning",
+    "integratedLearningDescription": "Eliminates the need to open a separate application to study; reviews arrive directly where you already are.",
+    "spacedRepetitionTitle": "Spaced Repetition",
+    "spacedRepetitionDescription": "Uses proven learning algorithms to maximize knowledge retention.",
+    "aiPersonalizadaTitle": "Personalized AI",
+    "aiPersonalizadaDescription": "Automatically adjusts the difficulty and content according to the user's progress.",
+    "gamificationTitle": "Gamification",
+    "gamificationDescription": "Transforms studying into a fun and addictive experience with points, levels, and achievements."
+  },
+  "ProvaSocial": {
+    "title": "What our users say",
+    "description": "We have already helped more than 10,000 people master new languages",
+    "testimonials": [
+      {
+        "name": "Rafael Moreira",
+        "role": "English student",
+        "testimonial": "I'm finally making progress in English! I had tried several apps, but I always forgot to use them. With LexiFlow, the words arrive directly on my WhatsApp and I answer when I can."
+      },
+      {
+        "name": "Carla Santos",
+        "role": "IT Professional",
+        "testimonial": "Gamification keeps me motivated! I love seeing my points increase and leveling up. I've already learned over 500 words in Spanish in just 3 months using LexiFlow."
+      },
+      {
+        "name": "Pedro Lima",
+        "role": "Teacher",
+        "testimonial": "As a teacher, I recommend LexiFlow to all my students. Spaced repetition really works, and the fact that it uses WhatsApp eliminates any excuse not to practice."
+      }
+    ],
+    "reviews": "(758 reviews)"
+  },
+  "WhatsAppSimulation": {
+    "dailyPractice": "Hello! Time for your daily practice 🚀",
+    "howToSayMeeting": "How do you say \"reunião\" in English?",
+    "correctPoints": "✅ Correct! +10 points",
+    "streak": "You are on a 3-day streak!"
+  },
+  "PricingCard": {
+    "popular": "POPULAR"
+  }
+}
