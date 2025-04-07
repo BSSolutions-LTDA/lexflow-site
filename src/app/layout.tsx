@@ -1,8 +1,11 @@
+/* eslint-disable @next/next/no-async-client-component */
 "use client";
 
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { AuthProvider, ProfileProvider } from "@/hooks/use-profile";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale } from "next-intl/server";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,19 +17,25 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function RootLayout({
+export const metadata: Metadata = {
+  title: "LexiFlow | Aprenda idiomas pelo WhatsApp, Telegram e Discord",
+  description:
+    "LexiFlow é uma plataforma inovadora que combina repetição espaçada com WhatsApp, Telegram e Discord para aprendizado de idiomas.",
+};
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+
   return (
-    <html lang="pt-BR">
+    <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AuthProvider>
-          <ProfileProvider>{children}</ProfileProvider>
-        </AuthProvider>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   );
