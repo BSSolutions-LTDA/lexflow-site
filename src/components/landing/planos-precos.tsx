@@ -1,60 +1,73 @@
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { PricingCard } from "@/components/ui/pricing-card";
+import { useTranslations } from "next-intl";
 
-// Dados para os planos de preço
-const pricingPlans = [
-  {
-    title: "Gratuito",
-    subtitle: "Para experimentar",
-    price: "R$ 0",
-    features: [
-      "Limite de 20 palavras/dia",
-      "Acesso a temas básicos",
-      "Uma plataforma de mensagens",
-    ],
-    buttonText: "Começar Grátis",
-    buttonAction: () => console.log("Plano gratuito selecionado"),
-  },
-  {
-    title: "Premium",
-    subtitle: "Para aprendizado sério",
-    price: "R$ 29,90/mês",
-    features: [
-      "Palavras/frases ilimitadas",
-      "Todos os temas disponíveis",
-      "Todas as plataformas de mensagens",
-      "Análises avançadas",
-      "Conteúdo personalizado por IA",
-    ],
-    buttonText: "Assinar Agora",
-    buttonAction: () => console.log("Plano premium selecionado"),
-    isPopular: true,
-  },
-  {
-    title: "Empresarial",
-    subtitle: "Para escolas e empresas",
-    price: "Personalizado",
-    features: [
-      "Soluções customizadas",
-      "Dashboard para professores",
-      "Conteúdo específico para indústrias",
-      "Suporte dedicado",
-    ],
-    buttonText: "Fale Conosco",
-    buttonAction: () => console.log("Plano empresarial selecionado"),
-  },
-];
+interface PricingPlanProps {
+  title: string;
+  subtitle: string;
+  price: string;
+  features: string[];
+  buttonText: string;
+  buttonAction: () => void;
+  isPopular?: boolean;
+}
 
-export default function PlanosPrecos() {
+const PlanosPrecos = () => {
+  const t = useTranslations("PlanosPrecos");
+
+  // Create the pricing plans manually instead of trying to get them directly from translations
+  const pricingPlans: PricingPlanProps[] = [
+    {
+      title: t("pricingPlans.0.title"),
+      subtitle: t("pricingPlans.0.subtitle"),
+      price: t("pricingPlans.0.price"),
+      features: [
+        t("pricingPlans.0.features.0"),
+        t("pricingPlans.0.features.1"),
+        t("pricingPlans.0.features.2"),
+      ],
+      buttonText: t("pricingPlans.0.buttonText"),
+      buttonAction: () => console.log("Free plan selected"),
+    },
+    {
+      title: t("pricingPlans.1.title"),
+      subtitle: t("pricingPlans.1.subtitle"),
+      price: t("pricingPlans.1.price"),
+      features: [
+        t("pricingPlans.1.features.0"),
+        t("pricingPlans.1.features.1"),
+        t("pricingPlans.1.features.2"),
+        t("pricingPlans.1.features.3"),
+        t("pricingPlans.1.features.4"),
+      ],
+      buttonText: t("pricingPlans.1.buttonText"),
+      buttonAction: () => console.log("Premium plan selected"),
+      isPopular: true,
+    },
+    {
+      title: t("pricingPlans.2.title"),
+      subtitle: t("pricingPlans.2.subtitle"),
+      price: t("pricingPlans.2.price"),
+      features: [
+        t("pricingPlans.2.features.0"),
+        t("pricingPlans.2.features.1"),
+        t("pricingPlans.2.features.2"),
+        t("pricingPlans.2.features.3"),
+      ],
+      buttonText: t("pricingPlans.2.buttonText"),
+      buttonAction: () => console.log("Business plan selected"),
+    },
+  ];
+
   return (
     <section className="py-20 bg-white" id="planos">
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Planos que cabem no seu bolso
+            {t("title")}
           </h2>
           <p className="text-xl text-center text-gray-600 mb-16">
-            Escolha o plano ideal para o seu aprendizado
+            {t("subtitle")}
           </p>
         </AnimatedSection>
 
@@ -76,4 +89,6 @@ export default function PlanosPrecos() {
       </div>
     </section>
   );
-}
+};
+
+export default PlanosPrecos;

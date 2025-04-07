@@ -1,12 +1,15 @@
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { useTranslations } from "next-intl";
 
-export default function PropostaDeValor() {
+const PropostaDeValor = () => {
+  const t = useTranslations("PropostaDeValor");
+
   return (
     <section className="py-20 bg-gray-50" id="beneficios">
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            Por que o LexiFlow funciona
+            {t("title")}
           </h2>
         </AnimatedSection>
 
@@ -14,46 +17,46 @@ export default function PropostaDeValor() {
           <AnimatedSection delay={0.1}>
             <div className="p-6 border-t-4 border-blue-500 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold mb-3">
-                Aprendizado Integrado
+                {t("integratedLearningTitle")}
               </h3>
               <p className="text-gray-600">
-                Elimina a necessidade de abrir um aplicativo separado para
-                estudar; as revisões chegam diretamente onde você já está.
+                {t("integratedLearningDescription")}
               </p>
             </div>
           </AnimatedSection>
 
           <AnimatedSection delay={0.2}>
             <div className="p-6 border-t-4 border-purple-500 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-bold mb-3">Repetição Espaçada</h3>
+              <h3 className="text-xl font-bold mb-3">
+                {t("spacedRepetitionTitle")}
+              </h3>
               <p className="text-gray-600">
-                Utiliza algoritmos comprovados de aprendizado para maximizar a
-                retenção de conhecimento.
+                {t("spacedRepetitionDescription")}
               </p>
             </div>
           </AnimatedSection>
 
           <AnimatedSection delay={0.3}>
             <div className="p-6 border-t-4 border-green-500 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-bold mb-3">IA Personalizada</h3>
-              <p className="text-gray-600">
-                Ajusta automaticamente a dificuldade e o conteúdo conforme o
-                progresso do usuário.
-              </p>
+              <h3 className="text-xl font-bold mb-3">
+                {t("aiPersonalizadaTitle")}
+              </h3>
+              <p className="text-gray-600">{t("aiPersonalizadaDescription")}</p>
             </div>
           </AnimatedSection>
 
           <AnimatedSection delay={0.4}>
             <div className="p-6 border-t-4 border-yellow-500 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-bold mb-3">Gamificação</h3>
-              <p className="text-gray-600">
-                Transforma o estudo em uma experiência divertida e viciante
-                com pontos, níveis e conquistas.
-              </p>
+              <h3 className="text-xl font-bold mb-3">
+                {t("gamificationTitle")}
+              </h3>
+              <p className="text-gray-600">{t("gamificationDescription")}</p>
             </div>
           </AnimatedSection>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default PropostaDeValor;

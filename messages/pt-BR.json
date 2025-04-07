@@ -1,6 +1,7 @@
 {
   "HomePage": {
-    "title": "Olá mundo!"
+    "title": "Olá mundo!",
+    "description": "Revolucionando o aprendizado de idiomas através dos apps que você já usa."
   },
   "ComoFunciona": {
     "title": "Como o LexiFlow funciona",
@@ -129,5 +130,33 @@
   },
   "PricingCard": {
     "popular": "POPULAR"
+  },
+  "Navbar": {
+    "comoFunciona": "Como Funciona",
+    "beneficios": "Benefícios",
+    "planos": "Planos",
+    "depoimentos": "Depoimentos",
+    "faq": "FAQ",
+    "comecarGratis": "Começar Grátis",
+    "login": "Login"
+  },
+  "HeroSection": {
+    "title": "Aprenda idiomas onde você já está: no WhatsApp!",
+    "subtitle": "O LexiFlow leva o aprendizado até VOCÊ! Receba palavras, frases e exercícios diretamente no seu WhatsApp, Telegram ou Discord e responda quando puder.",
+    "ctaText": "COMEÇAR AGORA"
+  },
+  "Footer": {
+    "description": "Revolucionando o aprendizado de idiomas através dos apps que você já usa.",
+    "linksRapidos": "Links Rápidos",
+    "idiomas": "Idiomas",
+    "ingles": "Inglês",
+    "espanhol": "Espanhol",
+    "frances": "Francês",
+    "alemao": "Alemão",
+    "contato": "Contato",
+    "termosDeUso": "Termos de Uso",
+    "politicaDePrivacidade": "Política de Privacidade",
+    "cookies": "Cookies",
+    "todosOsDireitosReservados": "Todos os direitos reservados."
   }
 }

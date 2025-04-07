@@ -1,27 +1,28 @@
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { FeatureCard } from "@/components/ui/feature-card";
 import ClockIcon from "@/components/icons/clock-icon";
+import { useTranslations } from "next-intl";
 
 export default function ComoFunciona() {
+  const t = useTranslations("ComoFunciona");
   return (
     <section className="py-20 bg-white" id="como-funciona">
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            Como o LexiFlow funciona
+            {t("title")}
           </h2>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <FeatureCard
             icon={
-
               <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <ClockIcon />
               </div>
             }
-            title="Receba palavras diariamente"
-            description="Você recebe palavras e frases para aprender diretamente no WhatsApp, Telegram ou Discord."
+            title={t("receiveWordsTitle")}
+            description={t("receiveWordsDescription")}
             delay={0.1}
           />
 
@@ -45,8 +46,8 @@ export default function ComoFunciona() {
                 </svg>
               </div>
             }
-            title="Responda quando puder"
-            description="Sem pressão! Responda às perguntas quando for conveniente para você, direto no chat."
+            title={t("answerWhenYouCanTitle")}
+            description={t("answerWhenYouCanDescription")}
             delay={0.2}
           />
 
@@ -70,8 +71,8 @@ export default function ComoFunciona() {
                 </svg>
               </div>
             }
-            title="Nossa IA adapta o conteúdo"
-            description="A inteligência artificial personaliza o aprendizado conforme seu progresso e dificuldades."
+            title={t("aiAdaptsContentTitle")}
+            description={t("aiAdaptsContentDescription")}
             delay={0.3}
           />
         </div>

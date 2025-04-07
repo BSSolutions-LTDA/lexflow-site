@@ -38,7 +38,7 @@ export default function Header() {
           <AvatarFallback className="bg-indigo-800 text-white">
             {profile.name
               .split(" ")
-              .map((n:any) => n[0])
+              .map((n: any) => n[0])
               .join("")}
           </AvatarFallback>
         </Avatar>
