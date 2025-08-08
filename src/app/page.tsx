@@ -1,4 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
+import { useTranslations } from "next-intl";
 import ComoFunciona from "@/components/landing/como-funciona";
 import PropostaDeValor from "@/components/landing/proposta-de-valor";
 import ProvaSocial from "@/components/landing/prova-social";
@@ -22,9 +24,10 @@ import {
   QuestionnaireAnswers,
 } from "@/components/onboarding/questionnaire";
 import { TelegramIntegration } from "@/components/onboarding/telegram-integration";
-import { DashboardLayout } from "@/components/dashboard/dashboard-layout";
 import { RegisterForm } from "./(auth)/register/page";
 import { useRouter } from "next/navigation";
+import { AnimatedSection } from "@/components/ui/animated-section";
+import Image from "next/image";
 
 // Define view types
 type View =
@@ -36,12 +39,8 @@ type View =
   | "onboarding-telegram"
   | "dashboard";
 
-interface OnboardingData {
-  language: string | null;
-  questionnaire: QuestionnaireAnswers | null;
-}
-
 export default function ClientPage() {
+  const t = useTranslations();
   const router = useRouter();
   const [view, setView] = useState<View>("landing");
 
@@ -88,18 +87,20 @@ export default function ClientPage() {
             onClick={handleGoToLanding}
             className="flex items-center focus:outline-none"
           >
-            <span className="text-2xl font-bold text-blue-600">LexiFlow</span>
+            <AnimatedSection>
+              <img src="/logo.png" alt="Logo" className="mx-auto h-16" />
+            </AnimatedSection>
           </button>
         }
         // Only show menu items on landing page
         menuItems={
           view === "landing"
             ? [
-                { label: "Como Funciona", href: "#como-funciona" },
-                { label: "Benefícios", href: "#beneficios" },
-                { label: "Planos", href: "#planos" },
-                { label: "Depoimentos", href: "#depoimentos" },
-                { label: "FAQ", href: "#faq" },
+                { label: t("Navbar.comoFunciona"), href: "#como-funciona" },
+                { label: t("Navbar.beneficios"), href: "#beneficios" },
+                { label: t("Navbar.planos"), href: "#planos" },
+                { label: t("Navbar.depoimentos"), href: "#depoimentos" },
+                { label: t("Navbar.faq"), href: "#faq" },
               ]
             : []
         } // Pass empty array when not on landing
@@ -107,7 +108,7 @@ export default function ClientPage() {
         ctaButton={
           view === "landing"
             ? {
-                label: "Começar Grátis",
+                label: t("Navbar.comecarGratis"),
                 onClick: handleShowRegister, // Go to register
               }
             : undefined
@@ -116,7 +117,7 @@ export default function ClientPage() {
         secondaryButton={
           view === "landing"
             ? {
-                label: "Login",
+                label: t("Navbar.login"),
                 onClick: handleShowLogin, // Go to login
               }
             : undefined
@@ -125,10 +126,10 @@ export default function ClientPage() {
       {/* Hero Section (Only show if view is 'landing') */}
       {view === "landing" && (
         <HeroSection
-          title="Aprenda idiomas onde você já está: no WhatsApp!"
-          subtitle="O LexiFlow leva o aprendizado até VOCÊ! Receba palavras, frases e exercícios diretamente no seu WhatsApp, Telegram ou Discord e responda quando puder."
-          ctaText="COMEÇAR AGORA"
-          ctaAction={handleShowRegister} // Go to register
+          title={t("HeroSection.title")}
+          subtitle={t("HeroSection.subtitle")}
+          ctaText={t("HeroSection.ctaText")}
+          ctaAction={handleShowRegister}
           illustration={<WhatsAppSimulation />}
         />
       )}
@@ -189,20 +190,17 @@ export default function ClientPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">LexiFlow</h3>
-              <p className="text-gray-400">
-                Revolucionando o aprendizado de idiomas através dos apps que
-                você já usa.
-              </p>
+              <p className="text-gray-400">{t("Footer.description")}</p>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Links Rápidos</h4>
+              <h4 className="font-bold mb-4">{t("Footer.linksRapidos")}</h4>
               <ul className="space-y-2">
                 <li>
                   <a
                     href="#como-funciona"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    Como Funciona
+                    {t("Navbar.comoFunciona")}
                   </a>
                 </li>
                 <li>
@@ -210,7 +208,7 @@ export default function ClientPage() {
                     href="#beneficios"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    Benefícios
+                    {t("Navbar.beneficios")}
                   </a>
                 </li>
                 <li>
@@ -218,7 +216,7 @@ export default function ClientPage() {
                     href="#planos"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    Planos
+                    {t("Navbar.planos")}
                   </a>
                 </li>
                 <li>
@@ -226,20 +224,20 @@ export default function ClientPage() {
                     href="#faq"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    FAQ
+                    {t("Navbar.faq")}
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Idiomas</h4>
+              <h4 className="font-bold mb-4">{t("Footer.idiomas")}</h4>
               <ul className="space-y-2">
                 <li>
                   <a
                     href="#"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    Inglês
+                    {t("Footer.ingles")}
                   </a>
                 </li>
                 <li>
@@ -247,7 +245,7 @@ export default function ClientPage() {
                     href="#"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    Espanhol
+                    {t("Footer.espanhol")}
                   </a>
                 </li>
                 <li>
@@ -255,7 +253,7 @@ export default function ClientPage() {
                     href="#"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    Francês
+                    {t("Footer.frances")}
                   </a>
                 </li>
                 <li>
@@ -263,13 +261,13 @@ export default function ClientPage() {
                     href="#"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    Alemão
+                    {t("Footer.alemao")}
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Contato</h4>
+              <h4 className="font-bold mb-4">{t("Footer.contato")}</h4>
               <ul className="space-y-2">
                 <li className="flex items-center text-gray-400">
                   <MailIcon />
@@ -311,21 +309,21 @@ export default function ClientPage() {
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
             <p>
-              &amp;copy; {new Date().getFullYear()} LexiFlow. Todos os direitos
-              reservados.
+              &amp;copy; {new Date().getFullYear()} LexiFlow.{" "}
+              {t("Footer.todosOsDireitosReservados")}
             </p>
             <div className="flex justify-center space-x-6 mt-4">
               <a href="/termos" className="hover:text-white transition-colors">
-                Termos de Uso
+                {t("Footer.termosDeUso")}
               </a>
               <a
                 href="/privacidade"
                 className="hover:text-white transition-colors"
               >
-                Política de Privacidade
+                {t("Footer.politicaDePrivacidade")}
               </a>
               <a href="#" className="hover:text-white transition-colors">
-                Cookies
+                {t("Footer.cookies")}
               </a>
             </div>
           </div>

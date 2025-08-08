@@ -1,24 +1,30 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { ReactNode } from 'react'
+import { motion } from "framer-motion";
+import { ReactNode } from "react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 interface ButtonProps {
-  label: string
-  onClick: () => void
+  label: string;
+  onClick: () => void;
 }
 
 interface NavbarProps {
-  logo: ReactNode
+  logo: ReactNode;
   menuItems: {
-    label: string
-    href: string
-  }[]
-  ctaButton?: ButtonProps // Make optional
-  secondaryButton?: ButtonProps // Add optional secondary button
+    label: string;
+    href: string;
+  }[];
+  ctaButton?: ButtonProps; // Make optional
+  secondaryButton?: ButtonProps; // Add optional secondary button
 }
 
-export function Navbar({ logo, menuItems, ctaButton, secondaryButton }: NavbarProps) {
+export function Navbar({
+  logo,
+  menuItems,
+  ctaButton,
+  secondaryButton,
+}: NavbarProps) {
   return (
     <motion.header
       className="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm shadow-sm"
@@ -28,10 +34,8 @@ export function Navbar({ logo, menuItems, ctaButton, secondaryButton }: NavbarPr
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <div className="flex-shrink-0">
-            {logo}
-          </div>
-          
+          <div className="flex-shrink-0">{logo}</div>
+
           <nav className="hidden md:flex space-x-8">
             {menuItems.map((item, index) => (
               <motion.a
@@ -45,7 +49,7 @@ export function Navbar({ logo, menuItems, ctaButton, secondaryButton }: NavbarPr
               </motion.a>
             ))}
           </nav>
-          
+
           <div className="flex items-center space-x-4">
             {secondaryButton && (
               <motion.button
@@ -67,9 +71,10 @@ export function Navbar({ logo, menuItems, ctaButton, secondaryButton }: NavbarPr
                 {ctaButton.label}
               </motion.button>
             )}
+            <LanguageSwitcher />
           </div>
         </div>
       </div>
     </motion.header>
-  )
+  );
 }
